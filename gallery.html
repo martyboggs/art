@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background: black;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        // JavaScript to dynamically generate image tags
+        document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.getElementById("gallery");
+            var imgDirectory = "img1/";
+            var numImages = 20;
+
+            for (var i = 1; i <= numImages; i++) {
+                var img = document.createElement("img");
+                img.src = imgDirectory + i + ".png";
+                img.alt = "Artwork " + i;
+                gallery.appendChild(img);
+            }
+        });
+    </script>
+</body>
+</html>
