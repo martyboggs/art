@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-i=0
+i=32
 
 for file in 4x3/*; do 
     if [[ $file == *.png ]]
