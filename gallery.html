@@ -51,15 +51,22 @@
     <a href="/art" class="btn">Go Back</a>
 
     <script>
+        var search = new URLSearchParams(window.location.search);
+        var page = search.get('page');
         // JavaScript to dynamically generate image tags
         document.addEventListener("DOMContentLoaded", function() {
             var gallery = document.getElementById("gallery");
-            var imgDirectory = "minimalist-4x3/";
-            var totalImages = 47;
+            var totals = {
+                'abstract-3x4': 43, 
+                'minimalist-3x4': 23, 
+                'minimalist-4x3': 47,
+                'minimalist-1x1': 15
+            };
+            var totalImages = totals[page];
 
             for (var i = 0; i <= totalImages; i++) {
                 var img = document.createElement("img");
-                img.src = imgDirectory + i + ".png";
+                img.src = `${page}/${i}.png`;
                 img.alt = "Artwork " + i;
                 gallery.appendChild(img);
             }
