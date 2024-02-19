@@ -59,9 +59,9 @@
         document.addEventListener("DOMContentLoaded", function() {
             var gallery = document.getElementById("gallery");
             var imgDirectory = "minimalist-4x3/";
-            var numImages = 47;
+            var totalImages = 47;
 
-            for (var i = 0; i <= numImages; i++) {
+            for (var i = 0; i <= totalImages; i++) {
                 var img = document.createElement("img");
                 img.src = imgDirectory + i + ".png";
                 img.alt = "Artwork " + i;
