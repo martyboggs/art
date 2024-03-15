@@ -23,31 +23,27 @@
             line-height: 1.8;
         }
 
-        body > * {
-            margin-bottom: 30px;
-        }
-
         .main {
             max-width: 800px;
             margin: 0 auto;
         }
-
+        .main > * {
+            margin-bottom: 40px;
+        }
         .logo img {
             margin: 0 auto;
             max-width: 200px;
             padding-right: 12px;
         }
 
-        .description {
-            margin-bottom: 60px;
-        }
         img {
             max-width: 100%;
             display: block;
         }
         .insta {
             display: block;
-            margin: 0 auto 60px;
+            margin-left: auto;
+            margin-right: auto;
             max-width: 25px;
         }
         .btn {
@@ -56,13 +52,13 @@
             background: rgb(12, 12, 130);
             font-size: 24px;
             color: white;
-            margin: 20px auto 80px;
+            margin-left: auto;
+            margin-right: auto;
             text-decoration: none;
             display: inline-block;
         }
         .nav {
-            margin-top: 10px;
-            margin-bottom: 20px;
+            margin: -10px;
         }
         .nav a {
             display: inline-block;
@@ -70,14 +66,10 @@
             padding: 20px;
             color: white;
         }
-        .gallery-1,
-        .gallery-8 {
-            margin-bottom: 60px;
-        }
         .gallery-1 img {
             border: 1px solid white;
         }
-        .gallery-1 {
+        .gallery-1 div {
             border: 1px solid white;
             padding: 10px;
         }
@@ -94,20 +86,24 @@
 <body>
 <div class="main">
     <div class="logo"><img src="martyAI-logo.jpg"></div>
-    <div class="nav">
-        <a href="gallery.html?page=abstract-3x4">abstract 3x4</a>
-        <a href="gallery.html?page=minimalist-3x4">minimalist 3x4</a>
-        <a href="gallery.html?page=minimalist-4x3">minimalist 4x3</a>
-        <a href="gallery.html?page=minimalist-1x1">minimalist 1x1</a>
-        <a href="family-room.html">family room</a>
+    <div class="description">
+        We'll generate, print and frame your art.<br>Choose something from our gallery or send us your ideas
     </div>
 
-    <div class="description">
-    We'll generate and frame your art.<br>Choose something from our gallery or send us your ideas
+    <div>
+        <div class="nav">
+            <a href="gallery.html?page=abstract-3x4">abstract 3x4</a>
+            <a href="gallery.html?page=minimalist-3x4">minimalist 3x4</a>
+            <a href="gallery.html?page=minimalist-4x3">minimalist 4x3</a>
+            <a href="gallery.html?page=minimalist-1x1">minimalist 1x1</a>
+            <a href="family-room.html">family room</a>
+        </div>
     </div>
 
     <div class="gallery-1">
-        <img src="minimalist-4x3/28.png">
+        <div>
+            <img src="minimalist-4x3/28.png">
+        </div>
     </div>
 
 
