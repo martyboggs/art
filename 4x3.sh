@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-i=32
+i=17
 
 for file in 4x3/*; do 
     if [[ $file == *.png ]]
@@ -13,6 +13,7 @@ for file in 4x3/*; do
         i=`expr $i + 1`
         magick $file -crop 50%x+1232+928 $i.png
         i=`expr $i + 1`
+        rm $file
     fi
 done
 

@@ -13,6 +13,7 @@ for file in 1x1/*; do
         i=`expr $i + 1`
         magick $file -crop 50%x+1024+1024 $i.png
         i=`expr $i + 1`
+        rm $file
     fi
 done
 

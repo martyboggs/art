@@ -53,11 +53,12 @@
         // JavaScript to dynamically generate image tags
         document.addEventListener("DOMContentLoaded", function() {
             var gallery = document.getElementById("gallery");
-            var totals = {
+            var totals = { // number of last image
                 'abstract-3x4': 43,
                 'minimalist-3x4': 23,
                 'minimalist-4x3': 47,
-                'minimalist-1x1': 15
+                'minimalist-1x1': 15,
+                'nature': 19,
             };
             var totalImages = totals[page];
 
