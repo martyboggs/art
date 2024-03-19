@@ -228,6 +228,22 @@
         <a href="https://www.youtube.com/@PixelPropertyCupcakeCreations" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         <a href="https://linktr.ee/martyboggs" target="_blank"><i class="fa-solid fa-tree"></i></a>
     </div>
+
+    <script>
+    var imageEls = document.querySelectorAll('.gallery-1 img');
+    var images = [
+        `nature/${Math.floor(Math.random() * 20)}.png`,
+        `minimalist-4x3/${Math.floor(Math.random() * 46)}.png`,
+    ];
+    var image = images[Math.floor(Math.random() * images.length)];
+    for (var i = 0; i < imageEls.length; i += 1) {
+        imageEls[i].src = image;
+    }
+    imageEls = document.querySelectorAll('.pricing .frame > div > div');
+    for (i = 0; i < imageEls.length; i += 1) {
+        imageEls[i].style.background = `url(${image}) 100% 100% / cover`;
+    }
+    </script>
 </div>
 </body>
 </html> 
